@@ -1,0 +1,11 @@
+<% flash.each do |name, msg| %>
+  <% if flash.key? :notice %>
+    <div class="alert">
+      <%= content_tag :div, msg, class: 'name alert alert-info mt-2' %>
+    </div>
+  <% else %>
+    <div class="alert">
+      <%= content_tag :div, msg, class: 'name alert alert-danger mt-2' %>
+    </div>
+  <% end %>
+<% end %>
