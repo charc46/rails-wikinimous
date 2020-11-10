@@ -1,0 +1,6 @@
+<h1 class="text-center">Articles</h1>
+<% @articles.each do |article| %>
+  <h5><%= link_to "#{article.title}", article_path(article) %></h5>
+  <p><small><%= article.content.truncate(100) %></small></p>
+<% end %>
+<%= link_to "Add New Article", new_article_path, class: 'btn btn-primary' %>
